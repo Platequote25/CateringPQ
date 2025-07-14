@@ -1,0 +1,330 @@
+body, .orderflow-container {
+  background: #fcfbf7;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #222;
+  min-height: 100vh;
+  margin: 0;
+}
+.orderflow-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+}
+.orderflow-header {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 32px 0 16px 0;
+}
+.orderflow-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.orderflow-back {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #222;
+  cursor: pointer;
+}
+.orderflow-guestcount {
+  background: #f5c443;
+  color: #222;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 4px 18px;
+  font-size: 1.1rem;
+}
+.orderflow-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.orderflow-image img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.orderflow-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  text-align: left;
+}
+.orderflow-input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  background: #f5f3ea;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  outline: none;
+}
+.orderflow-btn {
+  width: 100%;
+  background: #f5c443;
+  color: #222;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 18px;
+  padding: 16px 0;
+  margin-top: auto;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.orderflow-btn:active {
+  background: #e6b800;
+}
+.orderflow-type-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.orderflow-type-card {
+  display: flex;
+  align-items: center;
+  background: #f5f3ea;
+  border-radius: 14px;
+  padding: 14px 18px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.2s;
+}
+.orderflow-type-card.selected {
+  border: 2px solid #f5c443;
+}
+.orderflow-type-info {
+  flex: 1;
+}
+.orderflow-type-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.orderflow-type-desc {
+  font-size: 1rem;
+  color: #b6a97a;
+}
+.orderflow-type-img {
+  width: 72px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 18px;
+}
+.orderflow-error {
+  color: #d32f2f;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.orderflow-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 24px 0 10px 0;
+  color: #222;
+}
+.orderflow-menu-item {
+  display: flex;
+  align-items: center;
+  background: #f5f3ea;
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  box-shadow: none;
+}
+.orderflow-menu-img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 16px;
+}
+.orderflow-menu-info {
+  flex: 1;
+  min-width: 0;
+}
+.orderflow-menu-name {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #222;
+}
+.orderflow-menu-price {
+  font-size: 1rem;
+  color: #b6a97a;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.orderflow-menu-desc {
+  font-size: 0.97rem;
+  color: #888;
+  margin-bottom: 2px;
+}
+.orderflow-menu-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+}
+.orderflow-qty-btn {
+  background: #f5f3ea;
+  border: none;
+  color: #b6a97a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.orderflow-qty-btn:active {
+  background: #f5c443;
+  color: #222;
+}
+
+@media (max-width: 768px) {
+  .orderflow-container {
+    max-width: 100%;
+    padding: 0 16px 32px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orderflow-container {
+    max-width: 100%;
+    padding: 0 16px 32px 16px;
+  }
+  .orderflow-image {
+    margin-bottom: 12px;
+  }
+  .orderflow-image img {
+    width: 80vw;
+    max-width: 220px;
+    height: auto;
+    border-radius: 12px;
+  }
+  .orderflow-header {
+    margin: 20px 0 10px 0;
+  }
+  .orderflow-title {
+    margin-bottom: 10px;
+  }
+  .orderflow-btn {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .orderflow-page-container {
+    flex-direction: column;
+  }
+  .orderflow-content {
+    width: 100%;
+    padding-bottom: 220px !important;
+  }
+}
+
+.orderflow-page-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.orderflow-content {
+  flex-grow: 1;
+}
+
+.orderflow-summary-list {
+  margin: 24px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.orderflow-summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.orderflow-summary-item:last-child {
+  border-bottom: none;
+}
+
+.orderflow-summary-item span:first-child {
+  font-weight: 500;
+}
+
+.orderflow-summary-total {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: right;
+  margin: 24px 0;
+  color: #b6a97a;
+}
+
+.orderflow-summary-highlight {
+  background: #f5f3ea;
+  color: #b6a97a;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin: 16px 0 8px 0;
+  text-align: left;
+}
+
+.orderflow-summary-misc {
+  text-align: right;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.step-orderSummary .cart-container,
+.step-orderConfirmation .cart-container {
+  display: none;
+}
+
+.step-orderSummary .orderflow-content,
+.step-orderConfirmation .orderflow-content {
+  flex-grow: 1;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .orderflow-page-container {
+    flex-direction: column;
+  }
+  .orderflow-content {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .cart-container {
+    position: relative; /* Not fixed */
+    width: 100%;
+    height: auto;
+    max-height: none;
+    top: auto;
+    box-shadow: none;
+    border-top: 1px solid #ddd;
+    border-left: none;
+    margin-top: 24px;
+    z-index: 1;
+  }
+}

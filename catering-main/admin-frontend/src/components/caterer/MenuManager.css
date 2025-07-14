@@ -1,0 +1,224 @@
+.category-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 700px) {
+  .category-wrap {
+    gap: 8px;
+  }
+}
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Debugging borders for alignment */
+.admin-navbar {
+  border: 0px solid !important;
+  border-style: none;
+}
+.menu-header {
+  border: 0px solid !important;
+  border-style: none;
+}
+.menu-content {
+  border: 0px solid !important;
+  border-style: none;
+}
+.menu-sidebar {
+  border: 0px solid !important;
+  border-style: none;
+}
+.menu-main {
+  border: 0px solid !important;
+  border-style: none;
+}
+
+.menu-header, .menu-content, .menu-sidebar, .menu-main {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.menu-header {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.menu-content {
+  display: flex;
+  min-height: calc(100vh - 100px);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.menu-sidebar {
+  width: 280px;
+  border-right: 0px solid;
+  padding: 24px 0;
+  flex-shrink: 0;
+}
+.menu-main {
+  flex: 1;
+  padding: 24px 0 24px 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .menu-container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .menu-content {
+    flex-direction: column;
+  }
+  .menu-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 0;
+  }
+  .menu-main {
+    padding: 16px 0 16px 8px;
+  }
+  .menu-header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .menu-container {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .menu-content {
+    flex-direction: column;
+    padding: 0 2px;
+  }
+  .menu-sidebar {
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .menu-main {
+    padding: 8px 0 8px 2px;
+  }
+}
+.menu-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.menu-modal, .menu-modal *, .menu-modal input {
+  box-sizing: border-box;
+}
+.menu-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+.menu-modal h2 {
+  margin: 0 0 24px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a202c;
+  text-align: center;
+}
+.menu-modal input {
+  width: 100%;
+  margin: 0 0 16px 0;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.menu-modal-error {
+  color: #e53e3e;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.menu-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.menu-modal-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.menu-modal-btn.cancel {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+.menu-modal-btn.cancel:hover {
+  background: #cbd5e0;
+}
+.menu-modal-btn.confirm {
+  background: #ff5c8d;
+  color: white;
+}
+.menu-modal-btn.confirm:hover {
+  background: #e14c7b;
+}
+@media (max-width: 900px) {
+  .menu-modal {
+    max-width: 98vw;
+    padding: 16px 8px;
+  }
+  .menu-modal input {
+    font-size: 15px;
+    padding: 12px 10px;
+  }
+}
+@media (max-width: 600px) {
+  .menu-modal {
+    max-width: 99vw;
+    padding: 12px 4px;
+    font-size: 15px;
+  }
+  .menu-modal input {
+    font-size: 15px;
+    padding: 12px 6px;
+    margin: 0 0 12px 0;
+  }
+  .menu-modal-actions {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .menu-modal-btn {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+/* Remove glassmorphism and v3 loading styles */
+.menu-loading-v3, .menu-loading-spinner-v3, .menu-loading-content {
+  display: none !important;
+} 
